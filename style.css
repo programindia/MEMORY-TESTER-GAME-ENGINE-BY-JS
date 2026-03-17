@@ -1,0 +1,129 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin-top: 10px;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  text-align: center;
+}
+
+
+h1{
+  color:#5c1c1c;
+  margin-bottom:10px;
+  letter-spacing:2px;
+}
+
+p{
+  font-size:2rem;
+  font-weight:bold;
+  color:#220168;
+  margin:15px 0;
+}
+
+/* Instructions */
+
+.steps{
+  max-width:700px;
+  margin:auto;
+  margin-bottom:20px;
+  color:#333;
+}
+
+.steps h5{
+  margin:6px 0;
+  font-weight:500;
+}
+
+.step{
+  color:red;
+  font-weight:bold;
+}
+
+/* BOX GRID */
+
+.boxes{
+  width:420px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+/* GAME BOXES */
+
+.boxes div{
+  height:160px;
+  border-radius:16px;
+  border:2px solid black;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  font-size:20px;
+  color:white;
+
+  cursor:pointer;
+
+  transition:transform .2s, box-shadow .2s;
+}
+
+footer{
+  margin-top:80px;
+  background:black;
+  color:white;
+  text-align:center;
+  width:100%;
+  padding:10px;
+}
+/* COLORS */
+
+.green{ background:green; }
+.pink{ background:#d70ded; }
+.blue{ background:#04044f; }
+.red{ background:#e50a20; }
+
+/* HOVER EFFECT */
+
+.boxes div:hover{
+  transform:scale(1.06);
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+/* GAME FLASH */
+
+.flash{
+  background:white !important;
+}
+
+/* GAME OVER */
+
+.loose{
+  background:red;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:600px){
+
+  .boxes{
+    width:90%;
+  }
+
+  .boxes div{
+    height:120px;
+    font-size:16px;
+  }
+
+  p{
+    font-size:1.5rem;
+  }
+
+}
